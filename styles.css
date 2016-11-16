@@ -16,7 +16,7 @@ h1 {
   display:inline-block;
   font-size:1.4em;
   font-weight: normal;
-  margin-bottom:0;
+  margin-bottom:20px;;
   text-transform:uppercase; 
   }
 
@@ -38,7 +38,6 @@ img {
 blockquote {
   font-family: 'Lora', serif;
   font-size: 2.5em;
-  text-align:justify;
 }
 
 /* Link Styles */
@@ -112,7 +111,6 @@ header {
 }
 
 .banner {
-  clear:both;
   text-align: center;
   background: url('images/japan-banner.jpg') no-repeat top center #f7c4c1;
   background-size: cover;
@@ -126,8 +124,10 @@ header {
 }
 
 .work {
-  background-image: none;
-  opacity: 0.5;
+  background: url('images/ocean-banner.jpg') no-repeat top center #f7c4c1;
+  background-size: cover;
+  opacity: 1;
+  padding: 10% 0;
 }
 
 .right {
@@ -160,14 +160,26 @@ header {
 }
 
 .card {
-  padding: 4%;
+  /*padding: 4%;
   max-width: 95%;
   text-align: left;
-  background: none;
-  /*border-bottom: 4px solid #edc55f;
+  background: #fff;
+  border-bottom: 4px solid #edc55f;
   border-radius: 6px;
   transition: all .5s;*/
 }
+
+.card {
+  margin: 30px;
+  padding: 20px 40px 40px;
+  padding: 4%;
+  max-width: 95%;
+  text-align: left;
+  background: #fff;
+  border-radius: 6px;
+  transition: all .5s;
+}
+
 
 .flex {
   display: -ms-flexbox;      
@@ -179,8 +191,8 @@ header {
 }
 
 .profile-image {
-  width: 150px;
-  height: 150px;
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
   border: 3px solid white;
   transition: all .5s;
@@ -240,6 +252,11 @@ WORK - GALLERY
   font-size: 0.75em;
   color: #666;
 }
+
+#gallery li:nth-child(2n+1) {  
+    clear: both;
+}
+
 
 
 /****************************** 
@@ -354,6 +371,11 @@ a.social:hover {
 /*Styles for larger screens*/
 @media screen and (min-width: 720px) {
   
+  blockquote {
+  text-align:justify;
+  }
+
+  
   header {
     padding: 15px 10%;
   }
@@ -372,18 +394,31 @@ a.social:hover {
     max-height: 450px;
   }
   
+  .work {
+  padding: 20% 0;
+  }
   .banner-page {
     width: 50%;
     margin: 0 auto;
   }
   
+  main {
+    display: -ms-flexbox;      
+    display: flex; 
+    width: 100%;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    flex-direction: row;
+    padding: 0 20px;
+  }
+  
   .flex {
     flex-direction: row;
-    margin-top:30px;
+ 
   }
   
   .card {
-    margin: 0px 10%;
+    margin: 40px 1.5%;
     padding: 35px 50px;
   }
   
@@ -396,33 +431,11 @@ a.social:hover {
   }
   
 
+  #gallery li:nth-child(2n+1) {  
+    clear: none;
+  }
+
   
   
 }
-/* 
-  header {
-    min-height: 100px;
-  }
-
-  .nav {
-    max-width: 1200px;
-    padding: 0 30px;
-  }
-
-
-  main {
-    padding-top: 20px;
-  }
-
-  main p {
-    line-height: 1.6em;
-  }
-
-  footer {
-    font-size: 1.3em;
-    max-width: 1200px;
-    margin: 40px auto;
-  }
-
-}*/
 
