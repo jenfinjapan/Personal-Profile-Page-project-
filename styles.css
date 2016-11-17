@@ -57,7 +57,9 @@ a:hover {
 
 header {
   display: flex;
+  display: -ms-flexbox; 
   justify-content: space-around;
+  -ms-flex-align: center;
   align-items: center;
   width: 100%;
   background-color: #fff;
@@ -115,19 +117,26 @@ header {
   background: url('images/japan-banner.jpg') no-repeat top center #f7c4c1;
   background-size: cover;
   overflow: hidden;
-  padding: 20% 0;
   display: flex;
+  display: -ms-flexbox;
   flex-direction:column;
-  justify-content: space-around;
+  -ms-flex-align: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   align-items: center;
   width: 100%;
+  padding: 20% 0;
+}
+
+.tags {
+  align-self: center;
+  max-width: 80%;
 }
 
 .work {
   background: url('images/ocean-banner.jpg') no-repeat top center #f7c4c1;
   background-size: cover;
   opacity: 1;
-  padding: 10% 0;
 }
 
 .right {
@@ -160,17 +169,7 @@ header {
 }
 
 .card {
-  /*padding: 4%;
-  max-width: 95%;
-  text-align: left;
-  background: #fff;
-  border-bottom: 4px solid #edc55f;
-  border-radius: 6px;
-  transition: all .5s;*/
-}
-
-.card {
-  margin: 30px;
+  margin: 4%;
   padding: 20px 40px 40px;
   padding: 4%;
   max-width: 95%;
@@ -201,10 +200,6 @@ header {
 
 .profile-image:hover {
   transform: scale(1.2);
-}
-
-.profile-text {
-  padding: 5% 0; 
 }
 
 ul.skills {
@@ -390,40 +385,42 @@ a.social:hover {
     line-height: 1em;
   }
   
-  .banner {
-    max-height: 450px;
+  .banner{
+    height: 470px;
   }
   
-  .work {
-  padding: 20% 0;
-  }
   .banner-page {
     width: 50%;
     margin: 0 auto;
   }
   
+  .tags {
+    max-width: 50%;
+  }
+ 
   main {
     display: -ms-flexbox;      
     display: flex; 
-    width: 100%;
+    margin: 0 auto;
     -ms-flex-pack: distribute;
     justify-content: space-around;
     flex-direction: row;
     padding: 0 20px;
-  }
-  
-  .flex {
-    flex-direction: row;
- 
+    max-width: 1200px;
   }
   
   .card {
+    max-width: 45%;
     margin: 40px 1.5%;
     padding: 35px 50px;
   }
   
+  .wide {
+    max-width: 95%;
+  }
+  
   .profile-text {
-  padding: 0 5% 2% 8%;  
+  padding: 0;  
   }
   
   #gallery li {
@@ -433,9 +430,17 @@ a.social:hover {
 
   #gallery li:nth-child(2n+1) {  
     clear: none;
-  }
-
-  
+  }  
   
 }
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  
+ .banner {
+  padding: 0;
+  }
+  
+}
+
+
 
