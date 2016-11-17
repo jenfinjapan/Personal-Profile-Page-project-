@@ -57,7 +57,9 @@ a:hover {
 
 header {
   display: flex;
+  display: -ms-flexbox; 
   justify-content: space-around;
+  -ms-flex-align: center;
   align-items: center;
   width: 100%;
   background-color: #fff;
@@ -115,19 +117,26 @@ header {
   background: url('images/japan-banner.jpg') no-repeat top center #f7c4c1;
   background-size: cover;
   overflow: hidden;
-  padding: 20% 0;
   display: flex;
+  display: -ms-flexbox;
   flex-direction:column;
-  justify-content: space-around;
+  -ms-flex-align: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   align-items: center;
   width: 100%;
+  padding: 20% 0;
+}
+
+.tags {
+  align-self: center;
+  max-width: 80%;
 }
 
 .work {
   background: url('images/ocean-banner.jpg') no-repeat top center #f7c4c1;
   background-size: cover;
   opacity: 1;
-  padding: 10% 0;
 }
 
 .right {
@@ -178,7 +187,6 @@ header {
   -ms-flex-pack: distribute;
   justify-content: space-around;
   flex-direction: column;
-  align-items:center;
 }
 
 .profile-image {
@@ -377,12 +385,8 @@ a.social:hover {
     line-height: 1em;
   }
   
-  .banner {
-    max-height: 450px;
-  }
-  
-  .work {
-  padding: 20% 0;
+  .banner{
+    height: 470px;
   }
   
   .banner-page {
@@ -390,15 +394,19 @@ a.social:hover {
     margin: 0 auto;
   }
   
+  .tags {
+    max-width: 50%;
+  }
+ 
   main {
     display: -ms-flexbox;      
     display: flex; 
-    max-width: 1200px;
     margin: 0 auto;
     -ms-flex-pack: distribute;
     justify-content: space-around;
     flex-direction: row;
     padding: 0 20px;
+    max-width: 1200px;
   }
   
   .card {
@@ -422,9 +430,17 @@ a.social:hover {
 
   #gallery li:nth-child(2n+1) {  
     clear: none;
-  }
-
-  
+  }  
   
 }
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  
+ .banner {
+  padding: 0;
+  }
+  
+}
+
+
 
